@@ -1,0 +1,991 @@
+/* General styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  padding-top: 80px;
+  overflow-x: hidden;
+}
+
+/* Header styles */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(69, 69, 69, 0.1);
+  z-index: 1000;
+  
+  min-height: 60px;  /* Ensures a minimum height */
+  max-height: 120px; /* Prevents it from becoming too tall */
+}
+
+
+/* Logo styles */
+.logo img {
+  height: 140px;
+}
+
+/* Menu styles */
+.menu {
+  display: flex;
+  justify-content: flex-end; /* Aligns the menu items to the right */
+  flex-grow: 1; /* Allows the menu to take the remaining space and push logo to the left */
+  margin-right: 210px; /* Moves the menu a little bit to the left from the right edge */
+}
+
+
+
+/* Menu list styles */
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+/* Menu list item styles */
+.menu ul li {
+  display: inline;
+}
+
+/* Menu link styles */
+.menu ul li a {
+  text-decoration: none;
+  color: #222121;
+  font-size: 1rem;
+  padding: 5px 10px;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.menu ul li a:hover {
+  color: #5f5e5e;
+  border-radius: 5px;
+  text-decoration: underline;
+}
+/* Landing Page Styles */
+.landingpage {
+  
+  border-radius: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  margin-bottom: 150px;
+  animation: fadeInUp 1s ease-in-out; /* Entrance animation for the entire section */
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Landing Page Text */
+.landingpage-text {
+  margin-top: 180px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 120px;
+  margin-bottom: 60px;
+  animation: slideInLeft 1s ease-in-out; /* Slide-in animation for the text */
+}
+
+.landingpage-text h1 {
+  font-size: 2.5em;
+  color: #f8f6f6;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.landingpage-text p {
+  font-size: 1.5em;
+  color: #f7f5f5;
+  animation: fadeIn 1.5s ease-in-out; /* Fade-in animation for the paragraph */
+}
+
+
+/* Landing Page Image */
+.landingpage-image {
+  flex-shrink: 0;
+  animation: slideInRight 2s ease-in-out; /* Slide-in animation for the image */
+  transition: transform 0.3s ease;
+}
+
+.landingpage-image:hover {
+  transform: scale(1.05);
+}
+
+.button {
+  background-color: #A3D65C; /* Light green shade */
+  width: 200px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  padding: 12px 32px;
+  border: none;
+  border-radius: 50px; /* Fully rounded edges */
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background 0.3s ease-in-out;
+}
+
+.button:hover {
+  background-color: #8FC947; /* Slightly darker green on hover */
+}
+.video-container {
+  position: absolute; /* Now relative to its parent div */
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.video-container video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover; /* Ensures the video covers the whole section */
+}
+
+/* Hide video controls */
+video::-webkit-media-controls {
+  display: none !important;
+}
+
+
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.collabs {
+  
+  display: flex;
+  flex-direction: column; /* Stack the text elements vertically */
+  align-items: center;
+  padding: 20px;
+}
+.collabs h4{
+  font-size: 2em; /* Adjust size as needed */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.38);
+  margin-bottom: 70px;
+
+}
+
+
+.collabs .image-container {
+  display: flex; /* Place the images side by side */
+  gap: 20px; /* Space between the images */
+  margin-top: 20px; /* Space between text and images */
+}
+
+.collabs img {
+  width: 250px;
+  height: 350px;
+  border-radius: 10px; /* Optional: round the corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow */
+}
+.collabs p{
+  font-size: 1.2em;
+}
+
+.apperance {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column; /* Stack the text elements vertically */
+  align-items: center;
+  padding: 20px;
+
+}
+.apperance .image-container {
+  display: flex; /* Place the images side by side */
+  gap: 20px; /* Space between the images */
+  margin-top: 20px; /* Space between text and images */
+}
+
+/* Appearance Image Styles */
+.apperance img {
+  width: 250px;
+  height: 270px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* Hover Effect for Images */
+.apperance img:hover {
+  transform: scale(1.44); /* Slightly grow the image */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Increase shadow for depth effect */
+}
+
+/* Appearance Heading Styles */
+.apperance h4 {
+  font-size: 2em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.38);
+  margin-bottom: 70px;
+  transition: transform 0.3s ease; /* Smooth transition for heading */
+}
+
+
+
+
+
+.awards {
+  display: flex;
+  flex-direction: column; /* Stack heading and content vertically */
+  align-items: center; /* Center the heading horizontally */
+  justify-content: flex-start; /* Align content to the top */
+  padding: 20px;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  box-sizing: border-box; /* Ensure padding is included in width calculations */
+}
+
+.awards h4 {
+  font-size: 2em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.38);
+  margin-bottom: 20px; /* Add space below the heading */
+  text-align: center;
+}
+
+.content, .content2 {
+  display: flex;
+  flex-direction: row; /* Arrange images and text side by side */
+  justify-content: space-between; /* Create space between the two columns */
+  align-items: flex-start; /* Align the content to the top */
+  width: 100%;
+  max-width: 1300px; /* Set a maximum width for the layout */
+  gap: 20px; /* Add space between the two columns */
+  padding: 0 20px; /* Prevent overflow from padding */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.award1, .award2 {
+  display: flex;
+  flex-direction: column; /* Stack images vertically */
+  align-items: flex-start; /* Align images to the left */
+  gap: 20px; /* Add space between images */
+}
+
+.image-container3, .image-container4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-container3 img, .image-container4 img {
+  width: 300px; /* Adjust image width */
+  height: 300px; /* Adjust image height */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow to images */
+  object-fit: cover; /* Maintain aspect ratio and fill the image box */
+}
+
+.image-container3.second, .image-container4.first, .image-container4.second, .image-container4.last {
+  margin-left: 0; /* Remove negative margins */
+  margin-right: 0; /* Ensure no overflow */
+}
+.image-container3.first, .image-container3.last {
+  margin-left: 60px; /* Move the first image slightly to the right */
+}
+
+
+
+
+.image-container4.first, .image-container4.last {
+  margin-left: -60px; /* Move the first image slightly to the left */
+}
+
+
+.text-container, .text-container2 {
+  margin-top: 300px;
+  flex: 1; /* Allow the text container to expand */
+  color: #333; /* Text color */
+}
+
+.text-container p, .text-container2 p {
+  font-size: 1.2em;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+
+.choose-us {
+  margin: 0 auto; /* Center the section */
+  display: flex;
+  align-items: center;
+  max-width: 1100px;
+  background: #fff;
+ margin-top: 90px;
+  overflow: hidden;
+  
+}
+
+/* Image Container */
+.choose-image {
+  margin-top: 20px;
+  border-radius: 15px;
+  flex: 1;
+  position: relative;
+  min-height: 400px; 
+  background: linear-gradient(105deg, #a7d337, #1e7d32);
+}
+
+.choose-image img {
+  border-radius: 15px;
+  margin-top: -20px;
+  width: 100%;
+  height: 700px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  object-fit: cover;
+  display: block;
+}
+
+
+
+/* Content Styling */
+.choose-content {
+  flex: 1;
+  padding: 40px;
+}
+
+.choose-content h5 {
+  color: #36b24a;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.choose-content h1 {
+  font-size: 32px;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.choose-content p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* Features Grid */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* Feature Items */
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.feature-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #e8f5e9;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.feature-icon img {
+  width: 80px;
+  height: 80px;
+}
+
+/* Feature Text */
+.feature-text h4 {
+  font-size: 18px;
+  color: #222;
+  margin: 0;
+}
+
+.feature-text p {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0 0;
+}
+
+
+
+
+.map {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.map h4 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #222;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 10px;
+}
+
+.map p {
+  font-size: 1rem;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  line-height: 1.6;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.map img {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  display: block;
+  margin: -160px auto 0 auto; /* Moves the image 20px up */
+}
+
+
+
+
+/* Footer Container */
+.footer {
+  background-color: #2a2a2a; /* Dark background */
+  color: #fff; /* White text */
+  padding: 40px 0;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Footer Content - Flexbox Layout */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* Makes content wrap on smaller screens */
+}
+
+/* Left Section - Company Info and Social Icons */
+.footer-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.footer-left h3 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  color: #81c784; /* Light green color for the heading */
+}
+
+.footer-left p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin: 8px 0;
+  color: #ccc; /* Lighter gray text for paragraph */
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.social-icon {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5em; /* Icon size */
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #81c784; /* Light green hover effect */
+}
+
+/* Right Section - Contact Information */
+.footer-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-right h4 {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+  color: #81c784; /* Light green for heading */
+}
+
+.footer-right p {
+  font-size: 1.1em;
+  margin: 20px 0 8px 0; /* Adjust the top margin to move it down */
+  color: #ccc; /* Lighter gray for text */
+}
+
+
+.footer-right a {
+  color: #81c784;
+  text-decoration: none;
+}
+
+.footer-right a:hover {
+  text-decoration: underline;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 1em;
+  color: #aaa; /* Light gray for bottom text */
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+
+  header {
+    padding: 10px 20px;  /* Reduce padding on smaller screens */
+  }
+
+  .logo img {
+    height: 120px;  /* Smaller logo on tablet screens */
+  }
+
+  .menu {
+    margin-right: 0;  /* Remove right margin */
+    justify-content: flex-start;  /* Align the menu items to the left */
+  }
+
+  .menu ul {
+    gap: 15px;  /* Reduce space between menu items */
+  }
+
+  .menu ul li a {
+    font-size: 0.9rem;  /* Smaller font size for menu items */
+  }
+  header {
+    padding: 10px 20px;
+  }
+
+  .menu ul {
+    gap: 10px;
+  }
+
+  .landingpage {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .landingpage-text {
+    margin-left: 0;
+    margin-top: 60px;
+    text-align: center;
+  }
+
+  .button {
+    width: 160px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-left, .footer-right {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .footer-left h3, .footer-right h4 {
+    font-size: 1.6em;
+  }
+
+  .footer-left p, .footer-right p {
+    font-size: 1.1em;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .video-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .video-container video {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+  }
+
+
+
+  .collabs {
+    padding: 15px; /* Reduced padding for smaller devices */
+  }
+
+  .collabs h4 {
+    font-size: 1.8em; /* Slightly smaller heading */
+    margin-bottom: 50px; /* Reduced margin */
+  }
+
+  .collabs .image-container {
+    flex-direction: column; /* Stack the images vertically */
+    align-items: center; /* Center the images */
+    gap: 15px; /* Reduced gap */
+  }
+
+  .collabs img {
+    width: 200px; /* Smaller images */
+    height: 300px; /* Adjusted height */
+  }
+
+  .collabs p {
+    font-size: 1.1em; /* Slightly smaller text */
+  }
+
+
+  .apperance {
+    padding: 15px; /* Reduced padding for smaller devices */
+  }
+
+  .apperance h4 {
+    font-size: 1.8em; /* Slightly smaller heading */
+    margin-bottom: 50px; /* Reduced margin */
+  }
+
+  .apperance .image-container {
+    flex-direction: column; /* Stack the images vertically */
+    align-items: center; /* Center the images */
+    gap: 15px; /* Reduced gap */
+  }
+
+  .apperance img {
+    width: 220px; /* Smaller images */
+    height: 240px; /* Adjusted height */
+  }
+
+  .awards {
+    padding: 15px; /* Reduced padding for smaller devices */
+  }
+
+  .awards h4 {
+    font-size: 1.8em; /* Slightly smaller heading */
+    margin-bottom: 15px; /* Reduced space below heading */
+  }
+
+  .content, .content2 {
+    flex-direction: column; /* Stack content vertically */
+    gap: 15px; /* Reduced space between items */
+    padding: 0 10px; /* Reduced padding for smaller screens */
+  }
+
+  .award1, .award2 {
+    align-items: center; /* Center the content for smaller screens */
+    gap: 15px; /* Reduced space between images */
+  }
+
+  .image-container3 img, .image-container4 img {
+    width: 250px; /* Smaller images for tablet view */
+    height: 250px; /* Adjusted height for tablet */
+  }
+
+  .text-container, .text-container2 {
+    margin-top: 150px; /* Reduced margin-top */
+    font-size: 1.1em; /* Slightly smaller text for readability */
+  }
+
+  .choose-us {
+    flex-direction: column; /* Stack the image and content vertically */
+    max-width: 100%; /* Ensure it fills the width */
+    margin-top: 50px; /* Reduced top margin */
+  }
+
+  .choose-image {
+    min-height: 300px; /* Reduced image container height */
+  }
+
+  .choose-image img {
+    height: 500px; /* Reduced image height */
+    margin-left: 0; /* Remove left margin */
+  }
+
+  .choose-content {
+    padding: 20px; /* Reduced padding */
+  }
+
+  .choose-content h1 {
+    font-size: 24px; /* Smaller heading font size */
+    margin-bottom: 10px;
+  }
+
+  .choose-content p {
+    font-size: 14px; /* Smaller paragraph font size */
+  }
+
+  .features {
+    grid-template-columns: 1fr; /* Stack features vertically on smaller screens */
+  }
+
+  .feature-icon {
+    width: 40px; /* Smaller icon */
+    height: 40px; /* Smaller icon */
+  }
+
+  .feature-icon img {
+    width: 60px; /* Adjusted icon image size */
+    height: 60px; /* Adjusted icon image size */
+  }
+
+  .map {
+    padding: 30px 15px; /* Reduced padding */
+  }
+
+  .map h4 {
+    font-size: 1.5rem; /* Smaller heading font size */
+  }
+
+  .map p {
+    font-size: 0.9rem; /* Smaller paragraph font size */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .landingpage-text h1 {
+    font-size: 1.8em;
+  }
+
+  .landingpage-text p {
+    font-size: 1.2em;
+  }
+
+  .button {
+    width: 140px;
+  }
+
+  .footer-left h3 {
+    font-size: 1.4em;
+  }
+
+  .footer-left p, .footer-right p {
+    font-size: 1em;
+  }
+  .video-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .video-container video {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+  }
+
+  .collabs {
+    padding: 10px; /* Further reduced padding */
+  }
+
+  .collabs h4 {
+    font-size: 1.6em; /* Smaller heading for mobile */
+    margin-bottom: 30px; /* Reduced margin for mobile */
+  }
+
+  .collabs .image-container {
+    flex-direction: column; /* Stack the images vertically */
+    align-items: center; /* Center the images */
+    gap: 10px; /* Even smaller gap */
+  }
+
+  .collabs img {
+    width: 180px; /* Smaller images for mobile */
+    height: 270px; /* Adjusted height for mobile */
+  }
+
+  .collabs p {
+    font-size: 1em; /* Smaller text for mobile */
+  }
+
+  .apperance {
+    padding: 10px; /* Further reduced padding */
+  }
+
+  .apperance h4 {
+    font-size: 1.6em; /* Smaller heading for mobile */
+    margin-bottom: 30px; /* Reduced margin for mobile */
+  }
+
+  .apperance .image-container {
+    flex-direction: column; /* Stack the images vertically */
+    align-items: center; /* Center the images */
+    gap: 10px; /* Even smaller gap */
+  }
+
+  .apperance img {
+    width: 180px; /* Smaller images for mobile */
+    height: 200px; /* Adjusted height for mobile */
+  }
+  .awards {
+    padding: 10px; /* Further reduced padding */
+  }
+
+  .awards h4 {
+    font-size: 1.6em; /* Smaller heading for mobile */
+    margin-bottom: 10px; /* Reduced space below heading */
+  }
+
+  .content, .content2 {
+    flex-direction: column; /* Stack content vertically */
+    gap: 10px; /* Even smaller gap between items */
+    padding: 0 5px; /* Further reduced padding */
+  }
+
+  .award1, .award2 {
+    align-items: center; /* Center images and text for mobile */
+    gap: 10px; /* Reduced space between images */
+  }
+
+  .image-container3 img, .image-container4 img {
+    width: 200px; /* Smaller images for mobile */
+    height: 200px; /* Adjusted height for mobile */
+  }
+
+  .text-container, .text-container2 {
+    margin-top: 100px; /* Reduced margin-top */
+    font-size: 1em; /* Smaller text for mobile devices */
+  }
+  .choose-us {
+    margin-top: 30px; /* Even smaller margin on mobile */
+  }
+
+  .choose-image {
+    min-height: 250px; /* Even smaller image container */
+  }
+
+  .choose-image img {
+    height: 400px; /* Further reduced image height */
+  }
+
+  .choose-content h1 {
+    font-size: 20px; /* Even smaller heading font size */
+    margin-bottom: 8px;
+  }
+
+  .choose-content p {
+    font-size: 12px; /* Smaller paragraph font size */
+  }
+
+  .features {
+    grid-template-columns: 1fr; /* Stack features vertically */
+    gap: 15px; /* Reduced gap between items */
+  }
+
+  .feature-icon {
+    width: 35px; /* Even smaller icon */
+    height: 35px; /* Even smaller icon */
+  }
+
+  .feature-icon img {
+    width: 50px; /* Smaller icon image */
+    height: 50px; /* Smaller icon image */
+  }
+
+  .map {
+    padding: 20px 10px; /* Smaller padding */
+  }
+
+  .map h4 {
+    font-size: 1.2rem; /* Further reduced heading size */
+  }
+
+  .map p {
+    font-size: 0.85rem; /* Further reduced paragraph size */
+  }
+}
+

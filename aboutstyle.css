@@ -1,0 +1,583 @@
+.vision {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(50px); /* Slight downward shift */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.visionimage {
+    position: relative;
+    width: 1050px;
+    height: 600px;
+    overflow: hidden;
+}
+
+.visionimage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    opacity: 0;
+    transform: translateX(50px); /* Moves slightly right */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.visiontext {
+    position: absolute;
+    left: 0px;
+    transform: translateY(-50%);
+    background: #000;;
+    color: white;
+    padding: 20px;
+    width: 750px;
+    height: 450px;
+    z-index: 2;
+    opacity: 0;
+    transform: translateX(-50px); /* Moves slightly left */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.visiontext h2 {
+    margin-top: 30px;
+    font-size: 28px;
+}
+
+.visiontext p {
+    margin-top: 90px;
+    font-size: 20px;
+    line-height: 1.76;
+}
+
+/* Activate animations when visible */
+.vision.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.vision.active .visiontext {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.vision.active .visionimage img {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    background: url('pics/bbk2\ \(2\).jpg') no-repeat center center/cover;
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+  }
+  
+  .hero-overlay h1 {
+    font-size: 60px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .hero-overlay p {
+    font-size: 30px;
+    margin-top: 10px;
+  }
+  
+
+  .mission {
+    position: relative;
+    display: flex;
+    justify-content: flex-start; /* Align image to the left */
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(50px); /* Slight downward shift */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.missionimage {
+    position: relative;
+    width: 1050px;
+    height: 600px;
+    overflow: hidden;
+}
+
+.missionimage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    left: 0; /* Moves image to the left */
+    top: 0;
+    z-index: 1;
+    opacity: 0;
+    transform: translateX(-50px); /* Moves slightly left */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.missiontext {
+    position: absolute;
+    right: 0px;
+    transform: translateY(-50%);
+    background: #fffefe;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    width: 750px;
+    height: 450px;
+    z-index: 2;
+    opacity: 0;
+    transform: translateX(50px); /* Moves slightly right */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.missiontext h2 {
+    margin-top: 30px;
+    font-size: 28px;
+}
+
+.missiontext p {
+    margin-top: 90px;
+    font-size: 20px;
+    line-height: 1.76;
+}
+
+/* Activate animations when visible */
+.mission.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mission.active .missiontext {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.mission.active .missionimage img {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.contact-section {
+    position: relative;
+    height: 400px; /* Adjust if needed */
+    width: 100%;
+    overflow: visible; /* Allows content to extend outside */
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('pics/bbk1.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 0; /* Keeps it behind */
+}
+
+.contact-card {
+    position: absolute; /* Moves it relative to .contact-section */
+    top: 70%; /* Positions it right below the section */
+    left: 30%; /* Centers it horizontally */
+    transform: translateX(-50%); /* Adjusts centering */
+    background-color: #4CAF50;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+    z-index: 2; /* Ensures it appears over everything */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adds a floating effect */
+}
+
+
+.contact-title {
+    color: white;
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin: 0 0 1rem 0;
+    font-family: Arial, sans-serif;
+}
+
+.contact-subtitle {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+
+
+.contact-info-section {
+    justify-content: center;
+    margin-top: 60px;
+    max-width: 600px;
+    width: 100%; /* Added to ensure container takes full width up to max-width */
+    padding: 2rem;
+    background-color: white;
+}
+
+.contact-heading {
+    color: #4CAF50;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.contact-main-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.contact-description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+}
+
+.contact-detail {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.contact-icon-wrapper {
+    margin-top: 10px;
+    width: 48px;
+    height: 48px;
+    background-color: #E8F5E9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.contact-icon-wrapper i {
+    color: #4CAF50;
+    font-size: 1.25rem;
+}
+
+.contact-details-info {
+    flex-grow: 1;
+}
+
+.contact-subtitle1 {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom:10px;
+    font-weight: bold;
+}
+
+.contact-text {
+    color: #666;
+    line-height: 1.6;
+}
+
+.contact-text p {
+    margin: 0;
+}
+.social-media-container .social-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.social-media-container .social-iconscontainer {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.social-media-container .social-icon {
+    margin-bottom: 20px;
+    width: 48px;
+    height: 48px;
+    background-color: #4CAF50;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-media-container .social-icon:hover {
+    transform: translateY(-3px);
+    background-color: #45a049; /* Darker shade for hover state */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.social-media-container .social-icon i {
+    color: white;
+    font-size: 1.25rem;
+}
+
+
+@media screen and (max-width: 768px) {
+    /* Hero Section */
+    .hero-section {
+      height: 60vh; /* Adjust height */
+    }
+  
+    .hero-overlay h1 {
+      font-size: 40px;
+    }
+  
+    .hero-overlay p {
+      font-size: 22px;
+    }
+  
+    /* Vision Section */
+    .vision {
+      flex-direction: column; /* Stack content vertically */
+      justify-content: center;
+      text-align: center;
+    }
+  
+    .visionimage {
+      width: 100%;
+      height: 400px; /* Adjusted height */
+    }
+  
+    .visiontext {
+      position: static;
+      width: 100%;
+      height: auto;
+      padding: 20px;
+      transform: translateX(0);
+    }
+  
+    .visiontext h2 {
+      font-size: 24px;
+    }
+  
+    .visiontext p {
+      font-size: 18px;
+    }
+  
+    /* Mission Section */
+    .mission {
+      flex-direction: column; /* Stack content vertically */
+      justify-content: center;
+      text-align: center;
+    }
+  
+    .missionimage {
+      width: 100%;
+      height: 400px; /* Adjusted height */
+    }
+  
+    .missiontext {
+      position: static;
+      width: 100%;
+      height: auto;
+      padding: 20px;
+      transform: translateX(0);
+    }
+  
+    .missiontext h2 {
+      font-size: 24px;
+    }
+  
+    .missiontext p {
+      font-size: 18px;
+    }
+    .contact-card {
+        top: 50%; /* Adjusted to be more centered on tablet screens */
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 1.5rem; /* Reduce padding */
+        max-width: 500px; /* Adjust max width for tablet */
+      }
+    
+      .contact-title {
+        font-size: 2.5rem; /* Smaller title on tablets */
+      }
+    
+      .contact-subtitle {
+        font-size: 1.25rem; /* Smaller subtitle */
+      }
+    
+      .contact-info-section {
+        padding: 1.5rem; /* Reduce padding on tablets */
+      }
+    
+      .contact-heading {
+        font-size: 0.75rem; /* Smaller heading text */
+      }
+    
+      .contact-main-title {
+        font-size: 2rem; /* Smaller title */
+      }
+    
+      .contact-description {
+        font-size: 1rem; /* Adjust font size for description */
+      }
+    
+      .contact-subtitle1 {
+        font-size: 1rem; /* Smaller subtitle */
+      }
+    
+      .contact-text {
+        font-size: 0.9rem; /* Adjust text size */
+      }
+    
+      .contact-detail {
+        flex-direction: column; /* Stack details vertically */
+        align-items: flex-start;
+      }
+    
+      .contact-icon-wrapper {
+        margin-right: 0;
+        margin-bottom: 1rem; /* Spacing between icon and text */
+      }
+      .social-media-container .social-title {
+        font-size: 2rem; /* Adjust title size on tablets */
+        margin-bottom: 1.5rem; /* Adjust spacing */
+      }
+    
+      .social-media-container .social-iconscontainer {
+        gap: 0.8rem; /* Slightly reduce the gap */
+      }
+    
+      .social-media-container .social-icon {
+        width: 40px; /* Reduce icon size */
+        height: 40px; /* Maintain aspect ratio */
+        margin-bottom: 15px; /* Adjust spacing */
+      }
+    
+      .social-media-container .social-icon i {
+        font-size: 1rem; /* Adjust icon size */
+      }
+  }
+  
+  /* Mobile Devices */
+  @media screen and (max-width: 480px) {
+    /* Hero Section */
+    .hero-section {
+      height: 50vh; /* Adjust height */
+    }
+  
+    .hero-overlay h1 {
+      font-size: 30px;
+    }
+  
+    .hero-overlay p {
+      font-size: 18px;
+    }
+  
+    /* Vision Section */
+    .visiontext h2 {
+      font-size: 20px;
+    }
+  
+    .visiontext p {
+      font-size: 14px;
+    }
+  
+    /* Mission Section */
+    .missiontext h2 {
+      font-size: 20px;
+    }
+  
+    .missiontext p {
+      font-size: 14px;
+    }
+    .contact-card {
+        top: 45%; /* Adjust positioning for smaller screens */
+        left: 50%;
+        transform: translate(-50%, -45%);
+        padding: 1rem; /* Reduce padding further for mobile */
+        max-width: 400px; /* Adjust max width */
+      }
+    
+      .contact-title {
+        font-size: 2rem; /* Smaller title for mobile */
+      }
+    
+      .contact-subtitle {
+        font-size: 1.1rem; /* Smaller subtitle */
+      }
+    
+      .contact-info-section {
+        padding: 1rem; /* Further reduce padding on mobile */
+      }
+    
+      .contact-heading {
+        font-size: 0.7rem; /* Smaller heading text */
+      }
+    
+      .contact-main-title {
+        font-size: 1.5rem; /* Adjust font size */
+      }
+    
+      .contact-description {
+        font-size: 0.9rem; /* Smaller description text */
+      }
+    
+      .contact-subtitle1 {
+        font-size: 1rem; /* Smaller subtitle */
+      }
+    
+      .contact-text {
+        font-size: 0.85rem; /* Adjust text size */
+      }
+    
+      .contact-detail {
+        flex-direction: column; /* Stack details vertically */
+        align-items: flex-start;
+      }
+    
+      .contact-icon-wrapper {
+        margin-right: 0;
+        margin-bottom: 1rem; /* Spacing between icon and text */
+      }
+      .social-media-container .social-title {
+        font-size: 1.5rem; /* Smaller title size on mobile */
+        margin-bottom: 1rem; /* Adjust spacing */
+      }
+    
+      .social-media-container .social-iconscontainer {
+        gap: 0.5rem; /* Reduce gap between icons */
+      }
+    
+      .social-media-container .social-icon {
+        width: 35px; /* Smaller icons for mobile */
+        height: 35px; /* Maintain aspect ratio */
+        margin-bottom: 10px; /* Adjust spacing */
+      }
+    
+      .social-media-container .social-icon i {
+        font-size: 0.875rem; /* Adjust icon size for mobile */
+      }
+  }
