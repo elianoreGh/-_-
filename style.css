@@ -634,7 +634,8 @@ video::-webkit-media-controls {
   }
 
   .logo img {
-    height: 120px;  /* Smaller logo on tablet screens */
+
+    height: 100px;  /* Smaller logo on tablet screens */
   }
 
   .menu {
@@ -841,6 +842,28 @@ video::-webkit-media-controls {
   .landingpage-text h1 {
     font-size: 1.8em;
   }
+  .logo img {
+    height: 60px; /* Smaller logo */
+  }
+
+  header {
+    padding: 10px 15px;
+  }
+  .menu ul li {
+    width: 93px; /* Adjust based on content */
+    text-align: left;
+  }
+
+  .menu ul li a {
+    font-size: 0.71rem;
+    padding: 18px;
+    display: block; /* Makes each link take full width, forcing text to break */
+    text-align: left; /* Centers text for a better look */
+    white-space: normal; /* Ensures text wraps */
+    line-height: 1.4; /* Adjust spacing between lines */
+    width: max-content; /* Prevents unnecessary stretching */
+  }
+  
 
   .landingpage-text p {
     font-size: 1.2em;
